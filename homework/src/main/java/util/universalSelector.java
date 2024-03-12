@@ -25,7 +25,8 @@ public class universalSelector {
                 throw new NoSuchElementException("This element doesn't exist");
             }
         }
-        System.out.println("I AM A FIX");
+        System.out.println("I AM A CHANGE MEANWHILE");
+
     }
     private static WebElement waitUntilVisible(WebDriver driver, WebElement element) {
         WebDriverWait wait = new WebDriverWait(driver, 10);

@@ -35,5 +35,21 @@ public class Constants {
     public static final String APEIRIAN9 = "//td[text()='Apeirian9']";
     public static final String LOREM = "./preceding-sibling::td";
     public static final String LOREMVALUE = "Lorem value: ";
+//    customDropDownTest
+    public static final String TYMPANUS = "https://tympanus.net/Tutorials/CustomDropDownListStyling/";
+    public static final String ISDISPLAYEDMESSAGE = "Drop down menu displayed: ";
+    public static final String ACTIVE = "active";
+    public static final String GITHUB = "Github";
+//    nativeDropDownTest
+    public static final String TECHCANVASS = "https://techcanvass.com/examples/register.html";
+    public static final String MEGA = "Mega 123 Medium screen";
+//    waitForDisappearance
+    public static final String DYNAMIC = "http://the-internet.herokuapp.com/dynamic_controls";
+    public static final String ENABLED = "It's enabled!";
+    public static final String FIELDMESSAGE = "ACCESS GRANTED";
+//    waitForText
+    public static final String DEMOQA = "https://demoqa.com/progress-bar";
+    public static final String HUNDREDPERCENT = "100%";
+    public static final String STARTSTOP = "startStopButton";
 
 }

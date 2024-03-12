@@ -26,6 +26,7 @@ public class universalSelector {
             }
         }
         System.out.println("I AM A CHANGE MEANWHILE");
+
     }
     private static WebElement waitUntilVisible(WebDriver driver, WebElement element) {
         WebDriverWait wait = new WebDriverWait(driver, 10);

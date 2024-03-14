@@ -51,5 +51,26 @@ public class Constants {
     public static final String DEMOQA = "https://demoqa.com/progress-bar";
     public static final String HUNDREDPERCENT = "100%";
     public static final String STARTSTOP = "startStopButton";
+//    switchToTest
+    public static final String IFRAMEURL = "http://the-internet.herokuapp.com/iframe";
+    public static final String FRAMENAME = "mce_0_ifr";
+    public static final String HEREGOES = "Here Goes";
+//    alertTest
+    public static final String ALERTURL = "https://demoqa.com/alerts";
+    public static final String ALERTBUTTON = "alertButton";
+//    carsUrl
+    public static final String CARSURL = "https://techcanvass.com/Examples/webtable.html";
+    public static final String HONDA = "Honda";
+//    techlistUrl
+    public static final String TECHLISTURL = "https://www.techlistic.com/2017/02/automate-demo-web-table-with-selenium.html";
+    public static final String BURJKHALIFA = "Burj Khalifa";
+//    herokuapp
+    public static final String HEROKUSTR = "Phaedrum8";
+//    we3
+    public static final String WE3SCHOOLS = "https://www.w3schools.com/html/html_tables.asp";
+    public static final String UK = "UK";
+//    htmlTags
+    public static final String HTMLTAGS = "https://www.geeksforgeeks.org/html-tables/";
+    public static final String HTMLSTR = "<col>";
 
 }

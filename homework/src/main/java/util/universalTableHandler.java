@@ -33,6 +33,7 @@ public class universalTableHandler {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.get(url);
+        driver.manage().window().maximize();
 
         List<WebElement> tables = driver.findElements(By.xpath("//table"));
         for (WebElement table : tables) {

@@ -8,7 +8,6 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-
 public class SwitchToTest {
     WebDriver driver;
 
@@ -41,6 +40,7 @@ public class SwitchToTest {
         driver.switchTo().alert().accept();
         Thread.sleep(500);
     }
+
 
     @AfterClass
     public void tearDown(){

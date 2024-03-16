@@ -55,9 +55,12 @@ public class Constants {
     public static final String IFRAMEURL = "http://the-internet.herokuapp.com/iframe";
     public static final String FRAMENAME = "mce_0_ifr";
     public static final String HEREGOES = "Here Goes";
+    public static final String P = "//p";
 //    alertTest
     public static final String ALERTURL = "https://demoqa.com/alerts";
     public static final String ALERTBUTTON = "alertButton";
+    public static final String TIMERALERT = "timerAlertButton";
+    public static final String ALERTSRANDOMELEMENT = "//div[@class = 'header-text']";
 //    carsUrl
     public static final String CARSURL = "https://techcanvass.com/Examples/webtable.html";
     public static final String HONDA = "Honda";
@@ -72,5 +75,11 @@ public class Constants {
 //    htmlTags
     public static final String HTMLTAGS = "https://www.geeksforgeeks.org/html-tables/";
     public static final String HTMLSTR = "<col>";
+//    deleteTest
+    public static final String DELETEURL = "http://webdriveruniversity.com/To-Do-List/index.html";
+
+//    anotherScrollTest
+    public static final String SCROLLINGURL = "http://webdriveruniversity.com/Scrolling/index.html";
+    public static final String ZONE2 = "zone2-entries";
 
 }

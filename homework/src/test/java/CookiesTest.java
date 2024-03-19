@@ -76,7 +76,9 @@ public class CookiesTest {
         element.sendKeys(Keys.ARROW_DOWN);
         element.sendKeys(Keys.ENTER);
         System.out.println("conflict is raised here");
+
     }
+
 
     @AfterClass
     public void turnDown() {

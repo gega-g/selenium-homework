@@ -82,4 +82,17 @@ public class Constants {
     public static final String SCROLLINGURL = "http://webdriveruniversity.com/Scrolling/index.html";
     public static final String ZONE2 = "zone2-entries";
 
+//    filterCookies
+    public static final String FILTERCOOKIESURL = "https://www.techlistic.com/2017/02/automate-demo-web-table-with-selenium.html";
+    public static final String ACTIVETEMP = "active_template";
+    public static final String PUB = "pub_site";
+//    injectCookie
+    public static final String CHOCOCOOKIE = "ChocoCookie";
+    public static final String SOMEVALUE = "someValue";
+//    autoCompleteTest
+    public static final String AUTOCOMPLETETESTURL = "https://demo.automationtesting.in/AutoComplete.html";
+    public static final String FIELD = "'ui-autocomplete-multiselect ui-state-default ui-widget']";
+    public static final String SEARCHBOXID = "searchbox";
+    public static final String XPATHAUTO = "'ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all']";
+    public static final String EURO2024CONTENDER = "geo";
 }

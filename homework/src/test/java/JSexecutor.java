@@ -2,14 +2,10 @@ import ge.tbcitacademy.data.Constants;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.*;
 
-import java.awt.*;
-import java.awt.datatransfer.Clipboard;
-import java.awt.datatransfer.UnsupportedFlavorException;
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -17,20 +13,21 @@ import java.util.Map;
 public class JSexecutor {
     WebDriver driver;
 
-    public static Clipboard getSystemClipboard() {
-        Clipboard c = Toolkit.getDefaultToolkit().getSystemClipboard();
-        if (c == null) {
-            c = Toolkit.getDefaultToolkit().getSystemClipboard();
+
+    @BeforeTest
+    @Parameters("browser")
+    public void setup(String browser) {
+        if (browser.equalsIgnoreCase("chrome")){
+            WebDriverManager.chromedriver().setup();
+            driver = new ChromeDriver();
+        }else if (browser.equalsIgnoreCase("edge")){
+            WebDriverManager.edgedriver().setup();
+            driver = new EdgeDriver();
+        }else if (browser.equalsIgnoreCase("firefox")){
+            WebDriverManager.firefoxdriver().setup();
+            driver = new FirefoxDriver();
         }
-        return c;
-    }
-
-    @BeforeClass
-    public void setup() {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
         driver.manage().window().maximize();
-
     }
     @Test
     public void deleteTest() throws InterruptedException {
@@ -52,25 +49,7 @@ public class JSexecutor {
     @Test
     public void scrollTest(){
         driver.get(Constants.TECHLISTURL);
-        List <WebElement> exampleCodes = driver.findElements(By.xpath("//div[@class = 'bg-black rounded-md mb-4']"));
-        WebElement copyCode = driver.findElement(By.xpath("//*[@class='h-4 w-4']"));
         JavascriptExecutor js = (JavascriptExecutor) driver;
-//        ბევრი ვეცადე აქ მაგრამ არაფერი გამოვიდა ;დ tutorial-ებზე ჩვეულებრივად მუშაობს
-        for(WebElement exampleCode : exampleCodes){
-            js.executeScript("arguments[0].scrollIntoView();",exampleCode);
-            copyCode.click();
-//            სხვანაირი ხერხი ვერ ვიპოვე რითაც დავაკოპირებდი კოდს და შევინახავდი მარა ესეც არმუშაობს ;დდ
-
-            WebElement names = exampleCode.findElement(By.xpath("//h3/parent::div/parent::div/parent::div//pre//button"));
-            String namesString = names.getText();
-            Map<String, String> copiedCodes = new HashMap<>();
-            copiedCodes.put(namesString,getSystemClipboard().toString());
-            System.out.println(copiedCodes);
-        }
-
-
-
-//        tutorial links
         WebElement tutorials = driver.findElement(By.xpath("//span[@face='roboto, sans-serif']"));
         js.executeScript("arguments[0].scrollIntoView();",tutorials);
         WebElement element1 = driver.findElement(By.tagName("ul"));

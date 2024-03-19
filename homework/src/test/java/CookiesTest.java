@@ -75,6 +75,7 @@ public class CookiesTest {
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//ul[@class="+Constants.XPATHAUTO)));
         element.sendKeys(Keys.ARROW_DOWN);
         element.sendKeys(Keys.ENTER);
+        System.out.println("conflict is raised here");
     }
 
     @AfterClass
